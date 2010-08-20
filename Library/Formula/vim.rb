@@ -14,9 +14,10 @@ class Vim <Formula
                           "--disable-nls",
                           "--enable-multibyte",
                           "--with-tlib=ncurses",
-                          "--enable-pythoninterp",
                           "--enable-rubyinterp",
-                          "--with-features=huge"
+                          "--enable-luainterp",
+                          "--with-lua-prefix=/usr/local",
+                          "--with-features=huge",
     system "make"
     system "make install"
   end
