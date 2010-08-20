@@ -20,10 +20,9 @@ class Macvim <Formula
            "--with-macsdk=#{MACOS_VERSION}",
            # Add some features
            "--with-features=huge",
-           "--enable-perlinterp",
-           "--enable-pythoninterp",
            "--enable-rubyinterp",
-           "--enable-tclinterp"
+           "--enable-luainterp",
+           "--with-lua-prefix=/usr/local"
 
     if ARGV.include? "--no-icons"
       inreplace "src/MacVim/icons/Makefile", "$(MAKE) -C makeicns", ""
